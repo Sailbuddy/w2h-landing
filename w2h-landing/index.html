@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-i18n="meta.title">Wind2Horizon</title>
+  <meta name="description" content="" data-i18n-attr="content:meta.description" />
+  <meta name="robots" content="noindex" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body class="antialiased text-slate-900">
+  <header class="max-w-6xl mx-auto px-4 py-6 flex items-center gap-6">
+    <strong data-i18n="brand" class="text-lg">Wind2Horizon</strong>
+    <nav class="ml-auto flex items-center gap-4 text-sm">
+      <a href="/de" id="lng-de" class="hover:underline">DE</a>
+      <a href="/en" id="lng-en" class="hover:underline">EN</a>
+      <a href="/it" id="lng-it" class="hover:underline">IT</a>
+      <a href="/hr" id="lng-hr" class="hover:underline">HR</a>
+      <a href="/fr" id="lng-fr" class="hover:underline">FR</a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4">
+    <section class="py-16">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="hero.title"></h1>
+      <p class="text-lg md:text-xl text-slate-600 mb-8" data-i18n="hero.subtitle"></p>
+
+      <a id="cta-map"
+         class="inline-block rounded-xl px-6 py-3 bg-blue-600 text-white font-semibold shadow"
+         href="#">
+        <span data-i18n="cta.openMap"></span>
+      </a>
+    </section>
+
+    <section id="about" class="py-12 border-t">
+      <h2 class="text-2xl font-semibold mb-3" data-i18n="about.title"></h2>
+      <p class="text-slate-700" data-i18n="about.text"></p>
+    </section>
+
+    <section id="highlights" class="py-12 border-t">
+      <h2 class="text-2xl font-semibold mb-3" data-i18n="highlights.title"></h2>
+      <ul class="list-disc pl-6 text-slate-700 space-y-1">
+        <li data-i18n="highlights.items.0"></li>
+        <li data-i18n="highlights.items.1"></li>
+        <li data-i18n="highlights.items.2"></li>
+      </ul>
+    </section>
+
+    <section id="newsletter" class="py-12 border-t">
+      <h2 class="text-2xl font-semibold mb-3" data-i18n="newsletter.title"></h2>
+      <!-- Netlify Forms minimal (optional) -->
+      <form name="w2h-news" method="POST" data-netlify="true" class="flex gap-2 max-w-md">
+        <input type="hidden" name="form-name" value="w2h-news" />
+        <input name="email" type="email" required placeholder="you@email.com"
+               class="flex-1 border rounded px-3 py-2" />
+        <button class="rounded px-4 py-2 bg-slate-900 text-white" data-i18n="newsletter.cta"></button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-500 border-t">
+    <span data-i18n="footer.copy"></span>
+  </footer>
+
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>

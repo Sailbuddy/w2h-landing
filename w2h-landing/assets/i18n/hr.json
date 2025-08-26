@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Wind2Horizon – Vjetar i spotovi",
+    "description": "Interaktivna karta vjetra i spotova s partnerima i Bora sustavom."
+  },
+  "brand": "Wind2Horizon",
+  "hero": {
+    "title": "Tvoj vjetar. Tvoji spotovi.",
+    "subtitle": "Interaktivna karta sa spotovima, partnerima i Bora sustavom."
+  },
+  "cta": {
+    "openMap": "Otvori kartu"
+  },
+  "about": {
+    "title": "Što je W2H?",
+    "text": "Jedna rečenica zašto je W2H koristan."
+  },
+  "highlights": {
+    "title": "Istaknuto",
+    "items": [
+      "Višejezično",
+      "Partneri ekosustav",
+      "Bora sustav"
+    ]
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "cta": "Pretplati se"
+  },
+  "footer": {
+    "copy": "© Wind2Horizon"
+  }
+}

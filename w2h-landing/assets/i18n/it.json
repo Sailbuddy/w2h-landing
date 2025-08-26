@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Wind2Horizon – Vento & Spot",
+    "description": "Mappa interattiva di vento e spot con partner e sistema Bora."
+  },
+  "brand": "Wind2Horizon",
+  "hero": {
+    "title": "Il tuo vento. I tuoi spot.",
+    "subtitle": "Mappa interattiva con spot, partner e sistema Bora."
+  },
+  "cta": {
+    "openMap": "Apri la mappa"
+  },
+  "about": {
+    "title": "Cos’è W2H?",
+    "text": "Una frase che spiega perché W2H è utile."
+  },
+  "highlights": {
+    "title": "Punti di forza",
+    "items": [
+      "Multilingue",
+      "Ecosistema partner",
+      "Sistema Bora"
+    ]
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "cta": "Iscriviti"
+  },
+  "footer": {
+    "copy": "© Wind2Horizon"
+  }
+}

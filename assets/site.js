@@ -49,16 +49,13 @@
     }
   }
 
-  // 4) CTA-Button verlinken
-  function wireCta() {
-    const cta = document.getElementById('cta-map');
-    if (cta) {
-      // Falls die Map auf derselben Domain served wird:
-      cta.href = `/${LANG}/map`;
-      // Wenn sie auf beta läuft, nimm stattdessen:
-      // cta.href = `https://beta.wind2horizon.com/${LANG}/map`;
-    }
+  // 4) CTA-Button verlinken (auf sprachspezifische Map-Domain)
+function wireCta() {
+  const cta = document.getElementById('cta-map');
+  if (cta) {
+    cta.href = `https://map.wind2horizon.com/${LANG}/map`;
   }
+}
 
   // 5) Aktive Sprache im Header markieren (optional)
   function highlightLang(lang) {

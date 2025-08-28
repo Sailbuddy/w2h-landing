@@ -53,7 +53,7 @@
 function wireCta() {
   const cta = document.getElementById('cta-map');
   if (cta) {
-    cta.href = `https://map.wind2horizon.com/${LANG}/map`;
+    cta.href = `https://map.wind2horizon.com/${LANG}`;
   }
 }
 

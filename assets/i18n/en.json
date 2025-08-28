@@ -1,26 +1,26 @@
 {
   "meta": {
-    "title": "Wind2Horizon – Wind & Spots",
-    "description": "Interactive wind & spot map with partners and the Bora system."
+    "title": "Wind2Horizon – Mediterranean Sailing Coach",
+    "description": "All useful information and destinations for the Adriatic – weather, anchorages, harbours, restaurants, sights and stories."
   },
   "brand": "Wind2Horizon",
   "hero": {
-    "title": "Your wind. Your spots.",
-    "subtitle": "Interactive map with spots, partners & the Bora system."
+    "title": "Mediterranean Sailing Coach",
+    "subtitle": "Sailing, Consulting, Service, Weather and Entertainment"
   },
   "cta": {
-    "openMap": "Open map"
+    "openMap": "Open Map"
   },
   "about": {
     "title": "What is W2H?",
-    "text": "One-sentence pitch why W2H is useful."
+    "text": "All useful information and destinations for the Adriatic – on the water and along the coast. From current weather and special anchorages to safe harbours, great restaurants, sights and stories."
   },
   "highlights": {
     "title": "Highlights",
     "items": [
       "Multilingual",
-      "Partner ecosystem",
-      "Bora system"
+      "Partner Ecosystem",
+      "Bora System"
     ]
   },
   "newsletter": {

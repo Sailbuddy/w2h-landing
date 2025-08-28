@@ -1,33 +1,24 @@
 {
   "meta": {
-    "title": "Wind2Horizon – Wind & Spots",
-    "description": "Interaktive Wind- & Spotkarte mit Partnern und Bora-System."
+    "title": "Wind2Horizon – Segelcoach Mittelmeer",
+    "description": "Alle nützlichen Infos und Ziele für die Adria – Wetter, Ankerplätze, Häfen, Restaurants, Sehenswürdigkeiten und Geschichten."
   },
   "brand": "Wind2Horizon",
   "hero": {
-    "title": "Dein Wind. Deine Spots.",
-    "subtitle": "Interaktive Karte mit Spots, Partnern & Bora-System."
+    "title": "Segelcoach Mittelmeer",
+    "subtitle": "Segeln, Beratung, Service, Wetter und Unterhaltung"
   },
   "cta": {
     "openMap": "Karte öffnen"
   },
   "about": {
     "title": "Was ist W2H?",
-    "text": "Kurzbeschreibung – in einem Satz, warum W2H nützlich ist."
+    "text": "Alle für dich nützlichen Informationen und Reiseziele für den Bereich der Adria am Wasser und an der Küstenlinie. Von aktuellem Wetter, besonderen Ankerplätzen, sicheren Häfen, guten Restaurants, Sehenswürdigkeiten und Geschichten"
   },
   "highlights": {
     "title": "Highlights",
-    "items": [
-      "Mehrsprachig",
-      "Partner-Ökosystem",
-      "Bora-System"
-    ]
+    "items": ["Mehrsprachig", "Partner-Ökosystem", "Bora-System"]
   },
-  "newsletter": {
-    "title": "Newsletter",
-    "cta": "Abonnieren"
-  },
-  "footer": {
-    "copy": "© Wind2Horizon"
-  }
+  "newsletter": { "title": "Newsletter", "cta": "Abonnieren" },
+  "footer": { "copy": "© Wind2Horizon" }
 }

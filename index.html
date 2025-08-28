@@ -8,6 +8,33 @@
   <meta name="robots" content="noindex" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    /* Seitenhintergrund */
+    body { background: #39d0fa; }
+
+    /* Hero mit Hintergrundbild */
+    .hero {
+      position: relative;
+      min-height: clamp(360px, 55vh, 680px);
+      background-image: url('/public/images/hero-adriatic.jpg');
+      background-size: cover;
+      background-position: center 40%;
+      background-repeat: no-repeat;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: white;
+      text-shadow: 0 2px 14px rgba(0,0,0,.35);
+    }
+
+    .hero .overlay {
+      padding: 2rem;
+      backdrop-filter: saturate(120%) brightness(1.05);
+    }
+
+    .hero h1 { font-weight: 800; }
+  </style>
 </head>
 <body class="antialiased text-slate-900">
   <header class="max-w-6xl mx-auto px-4 py-6 flex items-center gap-6">
@@ -22,22 +49,27 @@
   </header>
 
   <main class="max-w-6xl mx-auto px-4">
-    <section class="py-16">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="hero.title"></h1>
-      <p class="text-lg md:text-xl text-slate-600 mb-8" data-i18n="hero.subtitle"></p>
+    <!-- HERO -->
+    <section class="hero py-16">
+      <div class="overlay">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="hero.title"></h1>
+        <p class="text-lg md:text-xl text-white/90 mb-8" data-i18n="hero.subtitle"></p>
 
-      <a id="cta-map"
-         class="inline-block rounded-xl px-6 py-3 bg-blue-600 text-white font-semibold shadow"
-         href="#">
-        <span data-i18n="cta.openMap"></span>
-      </a>
+        <a id="cta-map"
+           class="inline-block rounded-xl px-6 py-3 bg-white text-slate-900 font-semibold shadow"
+           href="#">
+          <span data-i18n="cta.openMap"></span>
+        </a>
+      </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="py-12 border-t">
       <h2 class="text-2xl font-semibold mb-3" data-i18n="about.title"></h2>
       <p class="text-slate-700" data-i18n="about.text"></p>
     </section>
 
+    <!-- HIGHLIGHTS -->
     <section id="highlights" class="py-12 border-t">
       <h2 class="text-2xl font-semibold mb-3" data-i18n="highlights.title"></h2>
       <ul class="list-disc pl-6 text-slate-700 space-y-1">
@@ -47,22 +79,5 @@
       </ul>
     </section>
 
-    <section id="newsletter" class="py-12 border-t">
-      <h2 class="text-2xl font-semibold mb-3" data-i18n="newsletter.title"></h2>
-      <!-- Netlify Forms minimal (optional) -->
-      <form name="w2h-news" method="POST" data-netlify="true" class="flex gap-2 max-w-md">
-        <input type="hidden" name="form-name" value="w2h-news" />
-        <input name="email" type="email" required placeholder="you@email.com"
-               class="flex-1 border rounded px-3 py-2" />
-        <button class="rounded px-4 py-2 bg-slate-900 text-white" data-i18n="newsletter.cta"></button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-500 border-t">
-    <span data-i18n="footer.copy"></span>
-  </footer>
-
-  <script src="/assets/site.js" defer></script>
-</body>
-</html>
+    <!-- NEWSLETTER -->
+    <section id="newsletter" class="p

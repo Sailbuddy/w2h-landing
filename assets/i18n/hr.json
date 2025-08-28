@@ -1,33 +1,19 @@
 {
   "meta": {
-    "title": "Wind2Horizon – Vjetar i spotovi",
-    "description": "Interaktivna karta vjetra i spotova s partnerima i Bora sustavom."
+    "title": "Wind2Horizon – Trener jedrenja za Mediteran",
+    "description": "Sve korisne informacije i odredišta za Jadran: vrijeme, sidrišta, luke, restorani, znamenitosti i priče."
   },
   "brand": "Wind2Horizon",
   "hero": {
-    "title": "Tvoj vjetar. Tvoji spotovi.",
-    "subtitle": "Interaktivna karta sa spotovima, partnerima i Bora sustavom."
+    "title": "Trener jedrenja za Mediteran",
+    "subtitle": "Jedrenje, savjetovanje, servis, vrijeme i zabava"
   },
-  "cta": {
-    "openMap": "Otvori kartu"
-  },
+  "cta": { "openMap": "Otvori kartu" },
   "about": {
     "title": "Što je W2H?",
-    "text": "Jedna rečenica zašto je W2H koristan."
+    "text": "Sve korisne informacije i odredišta za Jadran – na moru i uz obalu. Od aktualnog vremena, posebnih sidrišta, sigurnih luka, dobrih restorana do znamenitosti i priča."
   },
-  "highlights": {
-    "title": "Istaknuto",
-    "items": [
-      "Višejezično",
-      "Partneri ekosustav",
-      "Bora sustav"
-    ]
-  },
-  "newsletter": {
-    "title": "Newsletter",
-    "cta": "Pretplati se"
-  },
-  "footer": {
-    "copy": "© Wind2Horizon"
-  }
+  "highlights": { "title": "Izdvajamo", "items": ["Više jezika", "Partneri", "Bora sustav"] },
+  "newsletter": { "title": "Newsletter", "cta": "Pretplati se" },
+  "footer": { "copy": "© Wind2Horizon" }
 }

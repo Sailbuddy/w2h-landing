@@ -1,33 +1,19 @@
 {
   "meta": {
-    "title": "Wind2Horizon – Vent & spots",
-    "description": "Carte interactive du vent et des spots avec partenaires et système Bora."
+    "title": "Wind2Horizon – Coach de voile en Méditerranée",
+    "description": "Toutes les infos utiles et les destinations pour l’Adriatique : météo, mouillages, ports, restaurants, sites à visiter et histoires."
   },
   "brand": "Wind2Horizon",
   "hero": {
-    "title": "Ton vent. Tes spots.",
-    "subtitle": "Carte interactive avec spots, partenaires et système Bora."
+    "title": "Coach de voile en Méditerranée",
+    "subtitle": "Voile, conseil, service, météo et divertissement"
   },
-  "cta": {
-    "openMap": "Ouvrir la carte"
-  },
+  "cta": { "openMap": "Ouvrir la carte" },
   "about": {
-    "title": "Qu’est-ce que W2H ?",
-    "text": "Une phrase expliquant pourquoi W2H est utile."
+    "title": "Qu’est-ce que W2H ?",
+    "text": "Toutes les informations utiles et les destinations pour l’Adriatique, sur l’eau et le long du littoral. Météo actuelle, mouillages spéciaux, ports sûrs, bons restaurants, sites à visiter et histoires."
   },
-  "highlights": {
-    "title": "Points forts",
-    "items": [
-      "Multilingue",
-      "Écosystème partenaires",
-      "Système Bora"
-    ]
-  },
-  "newsletter": {
-    "title": "Newsletter",
-    "cta": "S’abonner"
-  },
-  "footer": {
-    "copy": "© Wind2Horizon"
-  }
+  "highlights": { "title": "Points forts", "items": ["Multilingue", "Écosystème de partenaires", "Système Bora"] },
+  "newsletter": { "title": "Newsletter", "cta": "S’abonner" },
+  "footer": { "copy": "© Wind2Horizon" }
 }

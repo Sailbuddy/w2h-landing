@@ -1,33 +1,19 @@
 {
   "meta": {
-    "title": "Wind2Horizon – Vento & Spot",
-    "description": "Mappa interattiva di vento e spot con partner e sistema Bora."
+    "title": "Wind2Horizon – Coach di vela nel Mediterraneo",
+    "description": "Tutte le informazioni utili e le destinazioni per l’Adriatico: meteo, ancoraggi, porti, ristoranti, luoghi da vedere e racconti."
   },
   "brand": "Wind2Horizon",
   "hero": {
-    "title": "Il tuo vento. I tuoi spot.",
-    "subtitle": "Mappa interattiva con spot, partner e sistema Bora."
+    "title": "Coach di vela nel Mediterraneo",
+    "subtitle": "Vela, consulenza, servizio, meteo e intrattenimento"
   },
-  "cta": {
-    "openMap": "Apri la mappa"
-  },
+  "cta": { "openMap": "Apri la mappa" },
   "about": {
     "title": "Cos’è W2H?",
-    "text": "Una frase che spiega perché W2H è utile."
+    "text": "Tutte le informazioni utili e le destinazioni per l’Adriatico, sull’acqua e lungo la costa. Dal meteo attuale agli ancoraggi speciali, porti sicuri, ottimi ristoranti, luoghi da visitare e racconti."
   },
-  "highlights": {
-    "title": "Punti di forza",
-    "items": [
-      "Multilingue",
-      "Ecosistema partner",
-      "Sistema Bora"
-    ]
-  },
-  "newsletter": {
-    "title": "Newsletter",
-    "cta": "Iscriviti"
-  },
-  "footer": {
-    "copy": "© Wind2Horizon"
-  }
+  "highlights": { "title": "Punti di forza", "items": ["Multilingue", "Ecosistema partner", "Sistema Bora"] },
+  "newsletter": { "title": "Newsletter", "cta": "Iscriviti" },
+  "footer": { "copy": "© Wind2Horizon" }
 }

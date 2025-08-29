@@ -1,19 +1,36 @@
 {
   "meta": {
-    "title": "Wind2Horizon – Coach di vela nel Mediterraneo",
-    "description": "Tutte le informazioni utili e le destinazioni per l’Adriatico: meteo, ancoraggi, porti, ristoranti, luoghi da vedere e racconti."
+    "title": "Wind2Horizon – Coach di vela per il Mediterraneo",
+    "description": "Tutte le informazioni utili e le destinazioni per l’Adriatico: meteo, ancoraggi, porti, ristoranti, luoghi da visitare e storie."
   },
   "brand": "Wind2Horizon",
   "hero": {
-    "title": "Coach di vela nel Mediterraneo",
-    "subtitle": "Vela, consulenza, servizio, meteo e intrattenimento"
+    "title": "Coach di vela per il Mediterraneo",
+    "subtitle": "Vela, consulenza, servizi, meteo e intrattenimento"
   },
-  "cta": { "openMap": "Apri la mappa" },
+  "cta": { 
+    "openMap": "Apri la mappa" 
+  },
   "about": {
-    "title": "Cos’è W2H?",
-    "text": "Tutte le informazioni utili e le destinazioni per l’Adriatico, sull’acqua e lungo la costa. Dal meteo attuale agli ancoraggi speciali, porti sicuri, ottimi ristoranti, luoghi da visitare e racconti."
+    "title": "Che cos’è W2H?",
+    "text": "Tutte le informazioni utili e le destinazioni per l’Adriatico, in mare e lungo la costa. Dal meteo attuale, ancoraggi speciali, porti sicuri, buoni ristoranti, fino a luoghi da visitare e storie."
   },
-  "highlights": { "title": "Punti di forza", "items": ["Multilingue", "Ecosistema partner", "Sistema Bora"] },
-  "newsletter": { "title": "Newsletter", "cta": "Iscriviti" },
-  "footer": { "copy": "© Wind2Horizon" }
+  "highlights": { 
+    "title": "In evidenza", 
+    "items": ["Multilingue", "Ecosistema di partner", "Sistema Bora"] 
+  },
+  "newsletter": { 
+    "title": "Newsletter", 
+    "cta": "Iscriviti" 
+  },
+  "footer": { 
+    "copy": "© Wind2Horizon" 
+  },
+
+  "bora.title": "Bora – vento di caduta sull’Adriatico",
+  "bora.p1": "La Bora è un vento freddo e rafficato lungo la costa adriatica, che può raggiungere improvvisamente forza di uragano con velocità superiori a 200 km/h.",
+  "bora.p2": "La Bora è prevedibile in modo ragionevole tramite la differenza di pressione tra le stazioni meteorologiche di Trieste e Maribor.",
+  "bora.p3": "Quando la pressione a Trieste è inferiore di 4 hPa (−4 hPa, linea arancione) rispetto a Maribor, si sviluppa la Bora; con una differenza di 8 hPa (−8 hPa, linea rossa) può diventare tempestosa. La linea bianca sottile (0 hPa) indica valori equilibrati.",
+  "bora.note": "I dati meteo live mostrati (pressione, direzione e velocità del vento) provengono da Open-Meteo.com, una piattaforma gratuita che elabora modelli numerici come ICON e GFS. Nota: i dati hanno scopo illustrativo e non sono certificati ufficialmente.",
+  "bora.linkLabel": "Apri grafico live"
 }

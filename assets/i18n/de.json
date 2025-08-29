@@ -19,6 +19,18 @@
     "title": "Highlights",
     "items": ["Mehrsprachig", "Partner-Ökosystem", "Bora-System"]
   },
-  "newsletter": { "title": "Newsletter", "cta": "Abonnieren" },
-  "footer": { "copy": "© Wind2Horizon" }
+  "newsletter": {
+    "title": "Newsletter",
+    "cta": "Abonnieren"
+  },
+  "footer": {
+    "copy": "© Wind2Horizon"
+  },
+
+  "bora.title": "Bora – Fallwind an der Adria",
+  "bora.p1": "Die Bora ist ein kalter, böiger Fallwind an der Adriaküste und kann plötzlich mit Orkanstärke auftreten und Windgeschwindigkeiten von über 200 km/h erreichen.",
+  "bora.p2": "Recht gut prognostizierbar ist die Bora anhand des Luftdruck-Unterschieds zwischen den Wetterstationen in Triest und Maribor.",
+  "bora.p3": "Ist der Luftdruck in Triest 4 hPa (orange Linie) niedriger (−4 hPa) als in Maribor, entsteht Bora; bei 8 hPa Differenz (−8 hPa, rote Linie) kann sie stürmisch sein. Die dünne weiße Linie (0 hPa) zeigt ausgeglichene Werte an.",
+  "bora.note": "Die dargestellten Live-Wetterdaten (Druck, Windrichtung und -geschwindigkeit) stammen von Open-Meteo.com, einer frei zugänglichen Plattform, die numerische Wettermodelle wie ICON und GFS verarbeitet. Hinweis: Die Daten dienen der Visualisierung und sind nicht behördlich geprüft.",
+  "bora.linkLabel": "Zum Live-Diagramm"
 }

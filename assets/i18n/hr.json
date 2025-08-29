@@ -8,12 +8,29 @@
     "title": "Trener jedrenja za Mediteran",
     "subtitle": "Jedrenje, savjetovanje, servis, vrijeme i zabava"
   },
-  "cta": { "openMap": "Otvori kartu" },
+  "cta": { 
+    "openMap": "Otvori kartu" 
+  },
   "about": {
     "title": "Što je W2H?",
     "text": "Sve korisne informacije i odredišta za Jadran – na moru i uz obalu. Od aktualnog vremena, posebnih sidrišta, sigurnih luka, dobrih restorana do znamenitosti i priča."
   },
-  "highlights": { "title": "Izdvajamo", "items": ["Više jezika", "Partneri", "Bora sustav"] },
-  "newsletter": { "title": "Newsletter", "cta": "Pretplati se" },
-  "footer": { "copy": "© Wind2Horizon" }
+  "highlights": { 
+    "title": "Izdvajamo", 
+    "items": ["Više jezika", "Partneri", "Bora sustav"] 
+  },
+  "newsletter": { 
+    "title": "Newsletter", 
+    "cta": "Pretplati se" 
+  },
+  "footer": { 
+    "copy": "© Wind2Horizon" 
+  },
+
+  "bora.title": "Bura – silazni vjetar na Jadranu",
+  "bora.p1": "Bura je hladan, rafalni silazni vjetar uz jadransku obalu koji može iznenada dosegnuti orkansku snagu s brzinama većim od 200 km/h.",
+  "bora.p2": "Buru je prilično dobro moguće prognozirati pomoću razlike tlaka zraka između meteoroloških postaja u Trstu i Mariboru.",
+  "bora.p3": "Kad je tlak u Trstu 4 hPa niži (−4 hPa, narančasta linija) nego u Mariboru, nastaje bura; pri razlici od 8 hPa (−8 hPa, crvena linija) može biti olujna. Tanka bijela linija (0 hPa) označuje izjednačene vrijednosti.",
+  "bora.note": "Prikazani podaci uživo (tlak, smjer i brzina vjetra) preuzeti su s Open-Meteo.com, besplatne platforme koja obrađuje numeričke modele poput ICON i GFS. Napomena: podaci služe vizualizaciji i nisu službeno provjereni.",
+  "bora.linkLabel": "Otvori live graf"
 }

@@ -8,12 +8,29 @@
     "title": "Coach de voile en Méditerranée",
     "subtitle": "Voile, conseil, service, météo et divertissement"
   },
-  "cta": { "openMap": "Ouvrir la carte" },
+  "cta": { 
+    "openMap": "Ouvrir la carte" 
+  },
   "about": {
     "title": "Qu’est-ce que W2H ?",
     "text": "Toutes les informations utiles et les destinations pour l’Adriatique, sur l’eau et le long du littoral. Météo actuelle, mouillages spéciaux, ports sûrs, bons restaurants, sites à visiter et histoires."
   },
-  "highlights": { "title": "Points forts", "items": ["Multilingue", "Écosystème de partenaires", "Système Bora"] },
-  "newsletter": { "title": "Newsletter", "cta": "S’abonner" },
-  "footer": { "copy": "© Wind2Horizon" }
+  "highlights": { 
+    "title": "Points forts", 
+    "items": ["Multilingue", "Écosystème de partenaires", "Système Bora"] 
+  },
+  "newsletter": { 
+    "title": "Newsletter", 
+    "cta": "S’abonner" 
+  },
+  "footer": { 
+    "copy": "© Wind2Horizon" 
+  },
+
+  "bora.title": "Bora – vent catabatique sur l’Adriatique",
+  "bora.p1": "La bora est un vent froid et rafaleux le long de la côte adriatique, pouvant atteindre soudainement la force d’un ouragan avec des vitesses supérieures à 200 km/h.",
+  "bora.p2": "La bora se prévoit assez bien à l’aide de la différence de pression entre les stations météorologiques de Trieste et de Maribor.",
+  "bora.p3": "Lorsque la pression à Trieste est inférieure de 4 hPa (−4 hPa, ligne orange) à celle de Maribor, la bora se met en place ; avec 8 hPa de différence (−8 hPa, ligne rouge) elle peut devenir tempétueuse. La fine ligne blanche (0 hPa) indique des valeurs équilibrées.",
+  "bora.note": "Les données météo en direct affichées (pression, direction et vitesse du vent) proviennent d’Open-Meteo.com, une plateforme gratuite traitant des modèles numériques tels qu’ICON et GFS. Remarque : les données servent à la visualisation et ne sont pas certifiées officiellement.",
+  "bora.linkLabel": "Ouvrir le graphique en direct"
 }

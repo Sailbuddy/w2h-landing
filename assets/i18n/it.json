@@ -27,10 +27,13 @@
     "copy": "© Wind2Horizon" 
   },
 
-  "bora.title": "Bora – vento di caduta sull’Adriatico",
-  "bora.p1": "La Bora è un vento freddo e rafficato lungo la costa adriatica, che può raggiungere improvvisamente forza di uragano con velocità superiori a 200 km/h.",
-  "bora.p2": "La Bora è prevedibile in modo ragionevole tramite la differenza di pressione tra le stazioni meteorologiche di Trieste e Maribor.",
-  "bora.p3": "Quando la pressione a Trieste è inferiore di 4 hPa (−4 hPa, linea arancione) rispetto a Maribor, si sviluppa la Bora; con una differenza di 8 hPa (−8 hPa, linea rossa) può diventare tempestosa. La linea bianca sottile (0 hPa) indica valori equilibrati.",
-  "bora.note": "I dati meteo live mostrati (pressione, direzione e velocità del vento) provengono da Open-Meteo.com, una piattaforma gratuita che elabora modelli numerici come ICON e GFS. Nota: i dati hanno scopo illustrativo e non sono certificati ufficialmente.",
-  "bora.linkLabel": "Apri grafico live"
+"bora": {
+  "title": "Bora – vento di caduta sull’Adriatico",
+  "p1": "La Bora è un vento freddo e rafficato lungo la costa adriatica, che può raggiungere improvvisamente forza di uragano con velocità superiori a 200 km/h.",
+  "p2": "La Bora è prevedibile in modo ragionevole tramite la differenza di pressione tra le stazioni meteorologiche di Trieste e Maribor.",
+  "p3": "Quando la pressione a Trieste è inferiore di 4 hPa (−4 hPa, linea arancione) rispetto a Maribor, si sviluppa la Bora; con una differenza di 8 hPa (−8 hPa, linea rossa) può diventare tempestosa. La linea bianca sottile (0 hPa) indica valori equilibrati.",
+  "note": "I dati meteo live mostrati (pressione, direzione e velocità del vento) provengono da Open-Meteo.com, una piattaforma gratuita che elabora modelli numerici come ICON e GFS. Nota: i dati hanno scopo illustrativo e non sono certificati ufficialmente.",
+  "linkLabel": "Apri grafico live"
+}
+
 }

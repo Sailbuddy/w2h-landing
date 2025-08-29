@@ -31,10 +31,13 @@
     "copy": "© Wind2Horizon"
   },
 
-  "bora.title": "Bora – Katabatic wind on the Adriatic",
-  "bora.p1": "The Bora is a cold, gusty downslope wind along the Adriatic coast that can suddenly reach hurricane force with wind speeds exceeding 200 km/h.",
-  "bora.p2": "The Bora can be forecast reasonably well using the air-pressure difference between the weather stations in Trieste and Maribor.",
-  "bora.p3": "When pressure in Trieste is 4 hPa lower (−4 hPa, orange line) than in Maribor, Bora develops; at an 8 hPa difference (−8 hPa, red line) it can become stormy. The thin white line (0 hPa) indicates balanced values.",
-  "bora.note": "The displayed live weather data (pressure, wind direction and speed) is sourced from Open-Meteo.com, a free platform processing numerical weather models such as ICON and GFS. Note: The data is for visualization and is not officially certified.",
-  "bora.linkLabel": "Open live chart"
+"bora": {
+  "title": "Bora – Katabatic wind on the Adriatic",
+  "p1": "The Bora is a cold, gusty downslope wind along the Adriatic coast that can suddenly reach hurricane force with wind speeds exceeding 200 km/h.",
+  "p2": "The Bora can be forecast reasonably well using the air-pressure difference between the weather stations in Trieste and Maribor.",
+  "p3": "When pressure in Trieste is 4 hPa lower (−4 hPa, orange line) than in Maribor, Bora develops; at an 8 hPa difference (−8 hPa, red line) it can become stormy. The thin white line (0 hPa) indicates balanced values.",
+  "note": "The displayed live weather data (pressure, wind direction and speed) is sourced from Open-Meteo.com, a free platform processing numerical weather models such as ICON and GFS. Note: The data is for visualization and is not officially certified.",
+  "linkLabel": "Open live chart"
+}
+
 }

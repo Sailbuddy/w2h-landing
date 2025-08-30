@@ -91,7 +91,7 @@
          href="#"
          target="_blank" rel="noopener" data-i18n="bora.linkLabel"></a>
 
-      <!-- LiveWind – Echtzeitzeile (Realo) unter dem Bora-Button -->
+      <!-- LiveWind – Echtzeitzeile (benennt Station automatisch, wenn möglich) -->
       <div id="livewind-embed"
            data-station="16108"
            data-height="76"
@@ -118,7 +118,7 @@
   <!-- WICHTIG: Script-Einbindung -->
   <script src="/assets/site.js" defer></script>
 
-  <!-- Dynamischer Bora-Link: setzt ?lang=xx und back=.../#bora je nach aktueller Sprache -->
+  <!-- Dynamischer Bora-Link -->
   <script>
     (function() {
       function currentLang() {
@@ -134,10 +134,38 @@
     })();
   </script>
 
-  <!-- LiveWind Embed – wiederverwendbares Mini-Modul -->
+  <!-- LiveWind Embed – Mini-Modul mit Stationsnamen-Auflösung -->
   <script>
     (function() {
-      function makeFrame(station, height) {
+      var NAME_CACHE = null; // wird nach erstem Fetch gefüllt
+
+      async function loadNameDirectory() {
+        if (NAME_CACHE) return NAME_CACHE;
+        // 1) Global in site.js bereitstellbar
+        if (window.LIVEWIND_STATIONS) { NAME_CACHE = window.LIVEWIND_STATIONS; return NAME_CACHE; }
+        // 2) Optional: aus /assets/stations.json oder /stations.json laden
+        var sources = ['/assets/stations.json','/stations.json'];
+        for (var i=0;i<sources.length;i++) {
+          try {
+            var r = await fetch(sources[i], {cache:'no-store'});
+            if (r.ok) { NAME_CACHE = await r.json(); return NAME_CACHE; }
+          } catch(e) {}
+        }
+        NAME_CACHE = {}; return NAME_CACHE;
+      }
+
+      async function resolveStationName(code, host) {
+        // a) explizit via data-station-name überschreiben
+        var viaAttr = host.getAttribute('data-station-name');
+        if (viaAttr) return viaAttr;
+        // b) bekannte Map laden
+        var map = await loadNameDirectory();
+        if (map && map[code]) return map[code];
+        // c) Fallback
+        return 'Station ' + code;
+      }
+
+      function makeFrame(station, height, nameCb) {
         var src = 'https://w2hlivewind.netlify.app?station=' + encodeURIComponent(station);
         var h = (height && !isNaN(+height)) ? +height : 76;
 
@@ -153,25 +181,31 @@
 
         var footer = document.createElement('div');
         footer.style.cssText = 'padding:6px 10px;font-size:12px;color:#6b7280;background:#fff';
-        footer.innerHTML = 'Echtzeit: <strong>Station '+station+'</strong> • ' +
+        footer.innerHTML = 'Echtzeit: <strong class="lw-name">Station '+station+'</strong> • ' +
           '<a href="'+src+'" target="_blank" rel="noopener noreferrer">Vollansicht öffnen</a>';
 
         outer.appendChild(iframe);
         outer.appendChild(footer);
+
+        // Asynchron den Namen ersetzen
+        nameCb().then(function(n){ 
+          var el = footer.querySelector('.lw-name'); 
+          if (el) el.textContent = n; 
+        });
+
         return outer;
       }
 
       function renderOne(host) {
         var station = host.getAttribute('data-station') || '16108';
         var height  = host.getAttribute('data-height')  || '76';
-        host.replaceChildren(makeFrame(station, height));
+        var nameCb = function(){ return resolveStationName(station, host); };
+        host.replaceChildren(makeFrame(station, height, nameCb));
       }
 
-      // 1) Einzelnes Standard-Element mit id
       var single = document.getElementById('livewind-embed');
       if (single) renderOne(single);
 
-      // 2) Optional: mehrere Embeds via data-livewind
       var nodes = document.querySelectorAll('[data-livewind]');
       nodes.forEach(renderOne);
     })();

@@ -90,6 +90,12 @@
          class="inline-block rounded px-4 py-2 bg-white border shadow text-slate-900 hover:bg-slate-100"
          href="#"
          target="_blank" rel="noopener" data-i18n="bora.linkLabel"></a>
+
+      <!-- LiveWind – Echtzeitzeile (Realo) unter dem Bora-Button -->
+      <div id="livewind-embed"
+           data-station="16108"
+           data-height="76"
+           class="mt-4"></div>
     </section>
 
     <!-- NEWSLETTER -->
@@ -125,6 +131,49 @@
       var href = 'https://sailbuddy.github.io/BoraLiveTender/?lang=' + lang + '&back=' + back;
       var a = document.getElementById('bora-link');
       if (a) a.href = href;
+    })();
+  </script>
+
+  <!-- LiveWind Embed – wiederverwendbares Mini-Modul -->
+  <script>
+    (function() {
+      function makeFrame(station, height) {
+        var src = 'https://w2hlivewind.netlify.app?station=' + encodeURIComponent(station);
+        var h = (height && !isNaN(+height)) ? +height : 76;
+
+        var outer = document.createElement('div');
+        outer.style.cssText = 'width:100%;border-radius:12px;overflow:hidden;border:1px solid #e5e7eb;box-shadow:0 6px 18px rgba(0,0,0,.12);background:#fff';
+
+        var iframe = document.createElement('iframe');
+        iframe.src = src;
+        iframe.title = 'LiveWind';
+        iframe.loading = 'lazy';
+        iframe.referrerPolicy = 'no-referrer';
+        iframe.style.cssText = 'width:100%;height:'+h+'px;border:0;display:block';
+
+        var footer = document.createElement('div');
+        footer.style.cssText = 'padding:6px 10px;font-size:12px;color:#6b7280;background:#fff';
+        footer.innerHTML = 'Echtzeit: <strong>Station '+station+'</strong> • ' +
+          '<a href="'+src+'" target="_blank" rel="noopener noreferrer">Vollansicht öffnen</a>';
+
+        outer.appendChild(iframe);
+        outer.appendChild(footer);
+        return outer;
+      }
+
+      function renderOne(host) {
+        var station = host.getAttribute('data-station') || '16108';
+        var height  = host.getAttribute('data-height')  || '76';
+        host.replaceChildren(makeFrame(station, height));
+      }
+
+      // 1) Einzelnes Standard-Element mit id
+      var single = document.getElementById('livewind-embed');
+      if (single) renderOne(single);
+
+      // 2) Optional: mehrere Embeds via data-livewind
+      var nodes = document.querySelectorAll('[data-livewind]');
+      nodes.forEach(renderOne);
     })();
   </script>
 </body>

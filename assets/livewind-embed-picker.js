@@ -1,4 +1,4 @@
-// LiveWind Embed + optional station picker (max 10) v1.0
+// LiveWind Embed + optional station picker (no hard 10-limit) v1.1
 (function() {
   var NAME_CACHE = null;
 
@@ -10,20 +10,47 @@
 
   async function loadGlobalNameMap() {
     if (NAME_CACHE) return NAME_CACHE;
+
     if (window.LIVEWIND_STATIONS) {
-      NAME_CACHE = Array.isArray(window.LIVEWIND_STATIONS)
-        ? window.LIVEWIND_STATIONS.reduce(function(acc, s){ acc[String(s.code)] = s.name || ('Station ' + s.code); return acc; }, {})
-        : Object.keys(window.LIVEWIND_STATIONS).reduce(function(acc, k){ acc[String(k)] = window.LIVEWIND_STATIONS[k]; return acc; }, {});
+      const src = window.LIVEWIND_STATIONS;
+      NAME_CACHE = Array.isArray(src)
+        ? src.reduce((acc, s) => {
+            acc[String(s.code)] = s.name || ('Station ' + s.code);
+            return acc;
+          }, {})
+        : Object.keys(src).reduce((acc, k) => {
+            acc[String(k)] = src[k]?.name || src[k] || ('Station ' + k);
+            return acc;
+          }, {});
       return NAME_CACHE;
     }
-    var candidates = ['/assets/stations.json','/stations.json'];
-    for (var i=0;i<candidates.length;i++) {
+
+    const candidates = ['/assets/stations.json','/stations.json'];
+    for (let i=0;i<candidates.length;i++) {
       try {
-        var r = await fetch(candidates[i], {cache:'no-store'});
-        if (r.ok) { NAME_CACHE = await r.json(); return NAME_CACHE; }
+        const r = await fetch(candidates[i], {cache:'no-store'});
+        if (!r.ok) continue;
+        const j = await r.json();
+
+        if (Array.isArray(j)) {
+          NAME_CACHE = j.reduce((acc, s) => {
+            if (s && s.code) acc[String(s.code)] = s.name || ('Station ' + s.code);
+            return acc;
+          }, {});
+        } else if (j && typeof j === 'object') {
+          NAME_CACHE = Object.keys(j).reduce((acc, k) => {
+            acc[String(k)] = j[k]?.name || j[k] || ('Station ' + k);
+            return acc;
+          }, {});
+        } else {
+          NAME_CACHE = {};
+        }
+        return NAME_CACHE;
       } catch(e) {}
     }
-    NAME_CACHE = {}; return NAME_CACHE;
+
+    NAME_CACHE = {};
+    return NAME_CACHE;
   }
 
   async function resolveStationName(code, host) {
@@ -74,12 +101,14 @@
 
     var select = document.createElement('select');
     select.style.cssText = 'padding:6px 10px; border-radius:10px; border:1px solid #e5e7eb; background:#fff; font-size:14px';
-    stations.slice(0,10).forEach(function(s){
+
+    stations.forEach(function(s){
       var opt = document.createElement('option');
       opt.value = String(s.code);
       opt.textContent = s.name || ('Station ' + s.code);
       select.appendChild(opt);
     });
+
     select.value = String(currentCode);
     select.addEventListener('change', function(e){ onChange(e.target.value); });
 
@@ -126,7 +155,6 @@
       seen.add(code);
       finalStations.push({code: code, name: s.name || ('Station ' + code)});
     });
-    finalStations = finalStations.slice(0,10);
 
     var sp = new URLSearchParams(location.search);
     var saved = localStorage.getItem('w2h_station');

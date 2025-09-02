@@ -1,42 +1,17 @@
 [
-  {
-    "code": "16108",
-    "name": "Poreč (Cable Park)"
-  },
-  {
-    "code": "11643",
-    "name": "Trieste – Molo Fratelli"
-  },
-  {
-    "code": "16101",
-    "name": "Rovinj (ACI Marina)"
-  },
-  {
-    "code": "16102",
-    "name": "Novigrad (Harbour)"
-  },
-  {
-    "code": "16103",
-    "name": "Umag (Stella Maris)"
-  },
-  {
-    "code": "16104",
-    "name": "Pula (Bunarina)"
-  },
-  {
-    "code": "16105",
-    "name": "Krk (Punat)"
-  },
-  {
-    "code": "16106",
-    "name": "Mali Lošinj"
-  },
-  {
-    "code": "16107",
-    "name": "Zadar (Uvala)"
-  },
-  {
-    "code": "16109",
-    "name": "Šibenik (Canal)"
-  }
+  { "place": "Triest (IT)",           "station_id": "16110", "station_name": "Trieste" },
+  { "place": "Pula (HR)",             "station_id": "14307", "station_name": "Pula Aerodrome" },
+  { "place": "Poreč (HR)",            "station_id": "14301", "station_name": "Porec" },
+  { "place": "Punat / Krk (HR)",      "station_id": "14317", "station_name": "Rijeka / Omisalj" },
+  { "place": "Mali Lošinj (HR)",      "station_id": "14314", "station_name": "Mali Losinj" },
+  { "place": "Cres (HR)",             "station_id": "14216", "station_name": "Rijeka / Kozala" },
+  { "place": "Zadar (HR)",            "station_id": "14431", "station_name": "Zadar / Zemunik" },
+  { "place": "Šibenik (HR)",          "station_id": "14438", "station_name": "Sibenik" },
+  { "place": "Vodice / Tribunj (HR)", "station_id": "14438", "station_name": "Sibenik" },
+  { "place": "Trogir (HR)",           "station_id": "14444", "station_name": "Split / Resnik" },
+  { "place": "Split (HR)",            "station_id": "14445", "station_name": "Split / Marjan" },
+  { "place": "Hvar (HR)",             "station_id": "14447", "station_name": "Hvar" },
+  { "place": "Vis / Komiža (HR)",     "station_id": "14441", "station_name": "Komiza" },
+  { "place": "Korčula (HR)",          "station_id": "14452", "station_name": "Lastovo" },
+  { "place": "Dubrovnik (HR)",        "station_id": "14472", "station_name": "Dubrovnik / Gorica" }
 ]

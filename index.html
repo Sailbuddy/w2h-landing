@@ -91,10 +91,12 @@
          href="#"
          target="_blank" rel="noopener" data-i18n="bora.linkLabel"></a>
 
-      <!-- LiveWind – Echtzeitzeile (benennt Station automatisch, wenn möglich) -->
+      <!-- LiveWind – Container mit Picker -->
       <div id="livewind-embed"
            data-station="16108"
            data-height="76"
+           data-picker="1"
+           data-stations="/assets/stations.json"
            class="mt-4"></div>
     </section>
 
@@ -134,81 +136,7 @@
     })();
   </script>
 
-  <!-- LiveWind Embed – Mini-Modul mit Stationsnamen-Auflösung -->
-  <script>
-    (function() {
-      var NAME_CACHE = null; // wird nach erstem Fetch gefüllt
-
-      async function loadNameDirectory() {
-        if (NAME_CACHE) return NAME_CACHE;
-        // 1) Global in site.js bereitstellbar
-        if (window.LIVEWIND_STATIONS) { NAME_CACHE = window.LIVEWIND_STATIONS; return NAME_CACHE; }
-        // 2) Optional: aus /assets/stations.json oder /stations.json laden
-        var sources = ['/assets/stations.json','/stations.json'];
-        for (var i=0;i<sources.length;i++) {
-          try {
-            var r = await fetch(sources[i], {cache:'no-store'});
-            if (r.ok) { NAME_CACHE = await r.json(); return NAME_CACHE; }
-          } catch(e) {}
-        }
-        NAME_CACHE = {}; return NAME_CACHE;
-      }
-
-      async function resolveStationName(code, host) {
-        // a) explizit via data-station-name überschreiben
-        var viaAttr = host.getAttribute('data-station-name');
-        if (viaAttr) return viaAttr;
-        // b) bekannte Map laden
-        var map = await loadNameDirectory();
-        if (map && map[code]) return map[code];
-        // c) Fallback
-        return 'Station ' + code;
-      }
-
-      function makeFrame(station, height, nameCb) {
-        var src = 'https://w2hlivewind.netlify.app?station=' + encodeURIComponent(station);
-        var h = (height && !isNaN(+height)) ? +height : 76;
-
-        var outer = document.createElement('div');
-        outer.style.cssText = 'width:100%;border-radius:12px;overflow:hidden;border:1px solid #e5e7eb;box-shadow:0 6px 18px rgba(0,0,0,.12);background:#fff';
-
-        var iframe = document.createElement('iframe');
-        iframe.src = src;
-        iframe.title = 'LiveWind';
-        iframe.loading = 'lazy';
-        iframe.referrerPolicy = 'no-referrer';
-        iframe.style.cssText = 'width:100%;height:'+h+'px;border:0;display:block';
-
-        var footer = document.createElement('div');
-        footer.style.cssText = 'padding:6px 10px;font-size:12px;color:#6b7280;background:#fff';
-        footer.innerHTML = 'Echtzeit: <strong class="lw-name">Station '+station+'</strong> • ' +
-          '<a href="'+src+'" target="_blank" rel="noopener noreferrer">Vollansicht öffnen</a>';
-
-        outer.appendChild(iframe);
-        outer.appendChild(footer);
-
-        // Asynchron den Namen ersetzen
-        nameCb().then(function(n){ 
-          var el = footer.querySelector('.lw-name'); 
-          if (el) el.textContent = n; 
-        });
-
-        return outer;
-      }
-
-      function renderOne(host) {
-        var station = host.getAttribute('data-station') || '16108';
-        var height  = host.getAttribute('data-height')  || '76';
-        var nameCb = function(){ return resolveStationName(station, host); };
-        host.replaceChildren(makeFrame(station, height, nameCb));
-      }
-
-      var single = document.getElementById('livewind-embed');
-      if (single) renderOne(single);
-
-      var nodes = document.querySelectorAll('[data-livewind]');
-      nodes.forEach(renderOne);
-    })();
-  </script>
+  <!-- LiveWind Picker/Embed Modul (lädt die Echtzeitzeile + Dropdown, max 10 Stationen) -->
+  <script src="/assets/livewind-embed-picker.js" defer></script>
 </body>
 </html>
